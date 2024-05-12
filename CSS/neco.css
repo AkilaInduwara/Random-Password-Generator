@@ -1,0 +1,19 @@
+
+/**
+* This is a variable font
+* You can control variable axes as shown below:
+* font-variation-settings: wght 900.0;
+*
+* available axes:
+'wght' (range from 400.0 to 900.0
+*/
+@font-face {
+  font-family: 'neco';
+  src: url('../fonts/Neco-Variable.woff2') format('woff2'),
+       url('../fonts/Neco-Variable.woff') format('woff'),
+       url('../fonts/Neco-Variable.ttf') format('truetype');
+  font-weight: 400 900;
+  font-display: swap;
+  font-style: normal;
+}
+
