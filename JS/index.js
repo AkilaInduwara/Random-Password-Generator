@@ -56,9 +56,18 @@ fileCopy.onclick = function(){
 
 function copyPassword(){
     //All select the password in the text field;
-    document.getElementById("passwordTxt").select();
+    // document.getElementById("passwordTxt").select(); 
+    const passwordToCopy = document.getElementById("passwordTxt").value;
 
     //copy selected password to the clipbord;
-    document.execCommand("copy");
+    // document.execCommand("copy");        ---> Instead of document.execCommand("copy"), use the newer Clipboard API.
+    navigator.clipboard.writeText(passwordToCopy)
+    .then(() => {
+        alert("Text copied to the Clipboard")
+    })
+    .catch(err => {
+        console.error('Unable to copy text: ', err);
+    });
+    
 
 }
